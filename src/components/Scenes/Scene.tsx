@@ -1,9 +1,17 @@
 import React from 'react'
 
-const Scene = () => {
+interface SceneProps {
+    dataScene: string[];
+}
+
+const Scene = (props: SceneProps) => {
     return (
-        <div>El nostre heroi estava surant per l'espai sideral quan a la llunyania va albirar una nau espacial</div>
+        <>
+            <ul>
+                {props.dataScene.map((item: any, index: number) => <li key={index}>{item}</li>)}
+            </ul>
+        </>
     )
 }
 
-export default Scene
+export default Scene;
