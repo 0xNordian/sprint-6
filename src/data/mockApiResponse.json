@@ -2,19 +2,19 @@
     "sentences": [
         {
             "text": "El nostre heroi estava surant per l'espai sideral quan a la llunyania va albirar una nau espacial",
-            "img": "/src/assets/images/1.jpg"
+            "img": "/images/1.jpg"
         },
         {
             "text": "Sentia curiositat per l'interior de la nau i es va posar a inspeccionar-la. Va arribar a una sala amb dues portes.",
-            "img": "/src/assets/images/2.jpg"
+            "img": "/images/2.jpg"
         },
         {
             "text": "L'heroi va decidir travessar la porta que el portava a casa",
-            "img": "/src/assets/images/3.jpg"
+            "img": "/images/3.jpg"
         },
         {
             "text": "Mentrestant, altres herois no van tenir tanta sort en la seva elecció ...",
-            "img": "/src/assets/images/4.jpg"
+            "img": "/images/4.jpg"
         }
     ]
 }
