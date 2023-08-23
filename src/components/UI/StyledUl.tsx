@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react'
 import styled from 'styled-components'
 
 const StyledList = styled.ul`
-    margin-left: 0.5rem;
+    margin: 0rem 12rem;
 `;
 
 interface SUlProps {

@@ -15,7 +15,10 @@ line-height: 2rem;
 margin: 1rem 1rem;
 text-align: center;
 border-radius: 1rem;
-background-color: ${props => props.isActive ? '#EE99AB' : '#fff'};
+background-color: ${props => props.isActive ? '#E45E7B' : '#fff'};
+color: ${props => props.isActive ? '#fff' : '#000'};
+font-weight: ${props => props.isActive ? 'bold' : 'normal'};
+font-size: ${props => props.isActive ? '1.2rem' : '1rem'};
 `;
 
 
@@ -41,8 +44,8 @@ const Scene = (props: SceneProps) => {
 
     const BackgroundContainer = styled.div`
     position: relative;
-    height: 100vh; /* Ensure full viewport height */
-    overflow: hidden; /* Hide any overflow from the background image */
+    height: 100vh;
+    overflow: hidden;
 `;
 
     const BackgroundImage = styled.div<{ imageUrl: string }>`
@@ -55,6 +58,7 @@ const Scene = (props: SceneProps) => {
     background-size: cover;
     background-position: center;
     z-index: -1;
+    filter: blur(5px)
 `;
 
 const imgSrc = props.dataScene[activeIndex].img;
