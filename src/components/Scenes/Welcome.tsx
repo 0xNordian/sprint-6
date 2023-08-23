@@ -13,7 +13,7 @@ const Welcome = (props: WelcomeProps) => {
     return (
         <>
         <section className={`${pageVisibility} flex flex-col justify-center items-center w-full h-[100vh]`}>
-            <h1>Welcome</h1>
+            <h1>Welcome to the tutotial 🤓</h1>
             <Button className="w-[500px]" btnType='btn-primary' msg='Start' onClick={props.onClick}/>
         </section>
         </>
