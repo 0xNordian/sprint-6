@@ -4,7 +4,7 @@ interface UIprops {
   className?: string;
   btnType: 'btn-primary' | 'btn-secondary' | 'btn-danger' | 'btn-warning';
   msg: string;
-  onClick: () => void;
+  onClick?: () => void;
 }
 
 const UI = (props: UIprops) => {

@@ -4,10 +4,12 @@ import StyledUl from '../UI/StyledUl.tsx'
 import Button from '../UI/Button.tsx'
 
 interface SceneProps {
+    className?: string;
+    onStarted?: boolean;
     dataScene: string[];
 }
 
-const StyledListItem = styled.li<{isActive: boolean}>`
+const StyledListItem = styled.li<{ isActive: boolean }>`
 border: 1px solid #000;
 line-height: 2rem;
 margin: 1rem 1rem;
@@ -19,6 +21,7 @@ background-color: ${props => props.isActive ? 'lightgrey' : '#fff'};
 
 const Scene = (props: SceneProps) => {
     const arrLength = props.dataScene.length;
+    const pageVisibility = props.onStarted ? 'visible' : 'hidden';
     const [activeIndex, setActiveIndex] = useState(() => 0);
 
     const indexIncreaseHandler = () => {
@@ -38,19 +41,21 @@ const Scene = (props: SceneProps) => {
 
     return (
         <>
-            <div className="w-full flex justify-center gap-4 my-6">
-                <Button className="w-[500px]" btnType='btn-primary' msg='Back' onClick={indexDecreaseHandler} />
-                <Button className="w-[500px]" btnType='btn-secondary' msg='Next' onClick={indexIncreaseHandler} />
-            </div>
-            <StyledUl>
-                {props.dataScene.map(
-                    (item: any, index: number) => (
-                        <StyledListItem isActive={index === activeIndex} key={index}>
-                            {item}
-                        </StyledListItem>
-                    )
-                )}
-            </StyledUl>
+            <section className={`${pageVisibility}`}>
+                <div className="w-full flex justify-center gap-4 my-6">
+                    <Button className="w-[500px]" btnType='btn-primary' msg='Back' onClick={indexDecreaseHandler} />
+                    <Button className="w-[500px]" btnType='btn-secondary' msg='Next' onClick={indexIncreaseHandler} />
+                </div>
+                <StyledUl>
+                    {props.dataScene.map(
+                        (item: any, index: number) => (
+                            <StyledListItem isActive={index === activeIndex} key={index}>
+                                {item}
+                            </StyledListItem>
+                        )
+                    )}
+                </StyledUl>
+            </section>
         </>
     )
 }
