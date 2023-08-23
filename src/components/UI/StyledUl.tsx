@@ -6,6 +6,7 @@ const StyledList = styled.ul`
 `;
 
 interface SUlProps {
+    className?: string;
     children: ReactNode;
 }
 
