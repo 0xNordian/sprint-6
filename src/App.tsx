@@ -11,6 +11,7 @@ export default function App() {
     <>
       <Welcome onClick={toggleStarted} onStarted={started}/>
       <Scene dataScene={data} onStarted={started}/>
+      <img src="./src/assets/images/2.jpg" />
     </>
   )
 }
